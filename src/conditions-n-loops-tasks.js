@@ -21,8 +21,8 @@
  *  0  => true
  *  -5 => false
  */
-function isPositive(/* number */) {
-  throw new Error('Not implemented');
+function isPositive(number) {
+  return number >= 0;
 }
 
 /**
@@ -38,8 +38,13 @@ function isPositive(/* number */) {
  *  -5, 0, 5      => 5
  *  -0.1, 0, 0.2  => 0.2
  */
-function getMaxNumber(/* a, b, c */) {
-  throw new Error('Not implemented');
+function getMaxNumber(a, b, c) {
+  const numbers = [a, b, c];
+  let max = a;
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > max) max = numbers[i];
+  }
+  return max;
 }
 
 /**
@@ -84,6 +89,7 @@ function canQueenCaptureKing(/* queen, king */) {
  */
 function isIsoscelesTriangle(/* a, b, c */) {
   throw new Error('Not implemented');
+  // return a === b || b === c || c === a;
 }
 
 /**
